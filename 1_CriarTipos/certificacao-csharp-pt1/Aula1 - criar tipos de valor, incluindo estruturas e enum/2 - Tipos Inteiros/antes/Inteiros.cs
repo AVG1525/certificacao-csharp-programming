@@ -32,6 +32,17 @@ namespace certificacao_csharp_roteiro.antes
             uint estoque = 1500; // System.UInt32 -> unsigned, ele não armazena o bit do sinal
 
             ulong populacao_do_mundo = 7_000_000_000; // 7 bilhoes - System.UInt64
+
+            Console.WriteLine($"Idade: {idade}");
+            Console.WriteLine($"Resposta: {resposta}");
+            Console.WriteLine($"Nivel de Azul: {nivel_de_azul}");
+            Console.WriteLine($"Passageiros Voo: {passageiros_voo}");
+            Console.WriteLine($"População: {populacao}");
+            Console.WriteLine($"População do Brasil: {populacao_do_brasil}");
+            Console.WriteLine($"Nivel de Brilho: {nivel_de_brilho}");
+            Console.WriteLine($"Passageiros Navio: {passageiros_navio}");
+            Console.WriteLine($"Estoque: {estoque}");
+            Console.WriteLine($"População do Mundo: {populacao_do_mundo}");
         }
     }
 }
