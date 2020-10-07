@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro.antes
 {
+    /*
+    Delegates podem ser armazenados como variáveis de referência, que representam e 
+    apontam para um determinado método, e são muito usados em combinação com eventos.
+    */
     class Delegates : IAulaItem
     {
         public void Executar()
