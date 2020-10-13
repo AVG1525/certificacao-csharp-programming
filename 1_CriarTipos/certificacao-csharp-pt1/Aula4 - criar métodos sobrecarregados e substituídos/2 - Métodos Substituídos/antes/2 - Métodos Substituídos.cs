@@ -26,7 +26,7 @@ namespace certificacao_csharp_roteiro.antes
             Console.WriteLine("Animal.Beber");
         }
 
-        public virtual void Comer()
+        public virtual void Comer() //O modificador virtual permite que o metodo do mesmo nome da classe derivada sobrescreva o da classe base
         {
             Console.WriteLine("Animal.Comer");
         }
@@ -44,7 +44,7 @@ namespace certificacao_csharp_roteiro.antes
             Console.WriteLine("Gato.Beber");
         }
 
-        public override void Comer()
+        public override void Comer() //O modificador override permite sobrescrever o mesmo metodo da base
         {
             Console.WriteLine("Gato.Comer");
         }
