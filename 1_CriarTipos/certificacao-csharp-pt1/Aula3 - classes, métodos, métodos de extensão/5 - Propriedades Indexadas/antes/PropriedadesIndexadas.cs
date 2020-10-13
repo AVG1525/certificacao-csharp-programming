@@ -11,8 +11,13 @@ namespace certificacao_csharp_roteiro.antes
         public void Executar()
         {
             var sala = new Sala();
-            sala.SetReserva("D01", new ClienteCinema("Maria de Souza"));
-            sala.SetReserva("D02", new ClienteCinema("José da Silva"));
+            //Forma Normal
+            //sala.SetReserva("D01", new ClienteCinema("Maria de Souza"));
+            //sala.SetReserva("D02", new ClienteCinema("José da Silva"));
+
+            //Forma utilizando as propriedades indexadas
+            sala["D01"] =  new ClienteCinema("Maria de Souza");
+            sala["D02"] = new ClienteCinema("José da Silva");
 
             sala.ImprimirReservas();
         }
@@ -35,18 +40,29 @@ namespace certificacao_csharp_roteiro.antes
 
     class Sala
     {
+        public ClienteCinema this [string codigoAssento] {  //Propriedades Indexadas
+            get {
+                return reservas[codigoAssento];
+            } 
+            
+            set {
+                reservas[codigoAssento] = value;
+            } 
+        }
+
         private readonly IDictionary<string, ClienteCinema> reservas
             = new Dictionary<string, ClienteCinema>();
 
-        public ClienteCinema GetReserva(string codigoAssento)
-        {
-            return reservas[codigoAssento];
-        }
+        //Forma normal
+        //public ClienteCinema GetReserva(string codigoAssento)
+        //{
+        //    return reservas[codigoAssento];
+        //}
 
-        public void SetReserva(string codigoAssento, ClienteCinema value)
-        {
-            reservas[codigoAssento] = value;
-        }
+        //public void SetReserva(string codigoAssento, ClienteCinema value)
+        //{
+        //    reservas[codigoAssento] = value;
+        //}
 
         public void ImprimirReservas()
         {
