@@ -10,7 +10,20 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
+            string vendedorDefinido = "Maria Fatima";
+            int numeroPedidoDefinido = 31;
+            string nomeProdutoDefinido = "Caneca Preta";
 
+
+            // Metodo chamado pelo jeito normal, usando argumentos posicionais
+            ImprimirDetalhesDoPedido(vendedorDefinido, numeroPedidoDefinido, nomeProdutoDefinido);
+
+
+            //Argumentos nomeados podem ser fornecidos para os parametros em qualquer ordem
+            ImprimirDetalhesDoPedido(numeroPedido: numeroPedidoDefinido, nomeProduto: nomeProdutoDefinido, vendedor: vendedorDefinido);
+
+            //Argumentos nomeados misturados com argumentos posicionais são válidos
+            ImprimirDetalhesDoPedido(vendedorDefinido, numeroPedidoDefinido, nomeProduto: nomeProdutoDefinido);
         }
 
         void ImprimirDetalhesDoPedido(string vendedor, int numeroPedido, string nomeProduto)
