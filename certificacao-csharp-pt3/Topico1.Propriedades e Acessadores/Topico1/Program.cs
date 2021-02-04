@@ -37,5 +37,20 @@ namespace Topico1
                 salario = value;
             }
         }
+
+        //private decimal salario;
+
+        //public decimal Salario
+        //{
+        //    get { return salario; }
+        //    set { salario = value; }
+        //} propfull
+
+        //public decimal Salario { get; set; }
+
+        // public => acessa em todos
+        // internal => somente no assemble atual
+        // protect => somente na classe e em suas derivações
+        // private => somente na classe
     }
 }
