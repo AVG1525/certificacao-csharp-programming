@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{568C7C82-DE53-4FBF-B7DA-25672784BEFE}</ProjectGuid>
+    <ProjectGuid>{0FB098FE-926D-4A5E-9EA4-D410437AB438}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Topico1.Propriedades_e_Acessadores</RootNamespace>
-    <AssemblyName>Topico1.Propriedades e Acessadores</AssemblyName>
+    <RootNamespace>Topico3.Interface_Explicita</RootNamespace>
+    <AssemblyName>Topico3.Interface Explicita</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -20,7 +20,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>0</WarningLevel>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,13 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="antes\Program.cs" />
     <Compile Include="depois\Program.cs" />
+    <None Include="antes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
