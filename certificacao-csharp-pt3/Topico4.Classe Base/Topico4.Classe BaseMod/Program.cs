@@ -20,6 +20,16 @@ namespace Topico4.Classe_BaseMod
             };
             ((IFuncionario)funcionario).GerarCracha();
             ((IPlantonista)funcionario).GerarCracha();
+
+
+            Cliente cliente = new Cliente()
+            {
+                Nome = "Maria de Souza",
+                DataNascimento = new DateTime(2001, 1, 1),
+                CPF = "000.000.000-00",
+                DataUltimaCompra = new DateTime(2021, 1, 1),
+                ValorUltimaCompra = 200
+            };
         }
     }
 
@@ -45,11 +55,8 @@ namespace Topico4.Classe_BaseMod
         void GerarCracha();
     }
 
-    class Funcionario : IFuncionario, IPlantonista
+    class Funcionario : Pessoa, IFuncionario, IPlantonista
     {
-        public string CPF { get; set; }
-        public string Nome { get; set; }
-        public DateTime DataNascimento { get; set; }
 
         public event EventHandler CrachaGerado;
 
@@ -86,12 +93,21 @@ namespace Topico4.Classe_BaseMod
         }
     }
 
-    class Cliente
+    sealed class Cliente : Pessoa
+    {
+        public DateTime? DataUltimaCompra { get; set; }
+        public decimal? ValorUltimaCompra { get; set; }
+
+        public override string ToString()
+        {
+            return $"Nome {Nome}, Data última compra: {DataUltimaCompra}";
+        }
+    }
+
+    abstract class Pessoa
     {
         public string CPF { get; set; }
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
-        public DateTime? DataUltimaCompra { get; set; }
-        public decimal? ValorUltimaCompra { get; set; }
     }
 }
